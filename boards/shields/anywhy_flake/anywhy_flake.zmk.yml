@@ -3,7 +3,7 @@ id: anywhy_flake
 name: Anywhy Flake
 type: shield
 url: https://github.com/anywhy-io/flake
-requires: [nice_nano_v2]
+requires: [pro_micro]
 features:
   - keys
   - studio
