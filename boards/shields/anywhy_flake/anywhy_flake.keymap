@@ -176,11 +176,11 @@
 
         num {
             bindings = <
-&kp GRAVE  &kp F1  &kp F2  &kp F3            &kp F4             &kp F5        &kp F6       &kp F7     &kp F8        &kp F9     &kp F10               &trans
-&trans     &trans  &trans  &trans            &kp LA(F1)         &trans        &kp PAGE_UP  &kp HOME   &kp UP_ARROW  &kp END    &trans                &trans
-&trans     &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LC(F8)    &kp PAGE_UP  &kp LEFT   &kp DOWN      &kp RIGHT  &trans                &trans
-&trans     &trans  &trans  &trans            &trans             &trans        &kp MINUS    &kp EQUAL  &trans        &trans     &kp NON_US_BACKSLASH  &trans
-           &trans  &trans  &trans            &trans             &trans        &trans       &trans     &trans        &trans     &trans
+&kp GRAVE  &kp F1           &kp F2           &kp F3            &kp F4             &kp F5                &kp F6       &kp F7     &kp F8        &kp F9     &kp F10               &trans
+&trans     &trans           &trans           &trans            &kp LA(F1)         &trans                &kp PAGE_UP  &kp HOME   &kp UP_ARROW  &kp END    &trans                &trans
+&trans     &trans           &trans           &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LC(F8)            &kp PAGE_UP  &kp LEFT   &kp DOWN      &kp RIGHT  &trans                &trans
+&trans     &kp LS(LC(F11))  &kp LS(LC(F12))  &kp LG(LEFT)      &kp LG(RIGHT)      &kp LA(LEFT_SHIFT)    &kp MINUS    &kp EQUAL  &trans        &trans     &kp NON_US_BACKSLASH  &trans
+           &trans           &trans           &trans            &trans             &trans                &trans       &trans     &trans        &trans     &trans
             >;
         };
 
