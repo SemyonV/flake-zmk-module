@@ -1,0 +1,5 @@
+west:
+  command: /usr/local/bin/west build -d ./build/settings_reset -p -b nice_nano//zmk
+    -s /zmk/zmk/app -- -DZMK_CONFIG=/zmk/config -DBOARD_ROOT=/zmk -DSHIELD=settings_reset
+  topdir: /zmk
+  version: 1.5.0

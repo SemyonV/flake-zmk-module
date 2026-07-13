@@ -1,0 +1,79 @@
+cmake:
+  application:
+    configuration-dir: /zmk/zmk/app
+    source-dir: /zmk/zmk/app
+  board:
+    name: nice_nano
+    path:
+     - /zmk/zmk/app/module/boards/nicekeyboards/nice_nano
+     - /zmk/zmk/app/boards/nicekeyboards/nice_nano
+    qualifiers: nrf52840/zmk
+    revision: 2.0.0
+  devicetree:
+    bindings-dirs:
+     - /zmk/zmk-auto-layer/dts/bindings
+     - /zmk/zmk-leader-key/dts/bindings
+     - /zmk/zmk-tri-state/dts/bindings
+     - /zmk/zmk-unicode/dts/bindings
+     - /zmk/zmk/app/module/dts/bindings
+     - /zmk/zmk/app/dts/bindings
+     - /zmk/zephyr/dts/bindings
+    extra-user-files:
+     - /zmk/boards/shields/anywhy_flake/anywhy_flake.keymap
+    files:
+     - /zmk/zmk/app/boards/nicekeyboards/nice_nano/nice_nano_nrf52840_zmk.dts
+     - /zmk/zmk/app/boards/nicekeyboards/nice_nano/nice_nano_nrf52840_zmk_2_0_0.overlay
+     - /zmk/boards/shields/anywhy_flake/anywhy_flake_right.overlay
+     - /zmk/boards/shields/anywhy_flake/anywhy_flake.keymap
+    include-dirs:
+     - /zmk/zmk-helpers/include
+     - /zmk/zmk-auto-layer/dts
+     - /zmk/zmk-leader-key/include
+     - /zmk/zmk-leader-key/dts
+     - /zmk/zmk-tri-state/dts
+     - /zmk/zmk-unicode/include
+     - /zmk/zmk-unicode/dts
+     - /zmk/modules/hal/stm32/dts
+     - /zmk/modules/hal/atmel/include
+     - /zmk/modules/hal/gigadevice/include
+     - /zmk/modules/hal/nuvoton/dts
+     - /zmk/zmk/app/module/include
+     - /zmk/zmk/app/module/dts
+     - /zmk/zmk/app/include
+     - /zmk/zmk/app/dts/common
+     - /zmk/zmk/app/dts
+     - /zmk/zephyr/include
+     - /zmk/zephyr/include/zephyr
+     - /zmk/zephyr/dts/common
+     - /zmk/zephyr/dts/x86
+     - /zmk/zephyr/dts/xtensa
+     - /zmk/zephyr/dts/sparc
+     - /zmk/zephyr/dts/riscv
+     - /zmk/zephyr/dts/posix
+     - /zmk/zephyr/dts/nios2
+     - /zmk/zephyr/dts/arm64
+     - /zmk/zephyr/dts/arm
+     - /zmk/zephyr/dts/arc
+     - /zmk/zephyr/dts
+  kconfig:
+    files:
+     - /zmk/zmk/app/boards/nicekeyboards/nice_nano/nice_nano_nrf52840_zmk_2_0_0_defconfig
+     - /zmk/zmk/app/prj.conf
+     - /zmk/config/anywhy_flake.conf
+     - /zmk/config/anywhy_flake.conf
+    user-files:
+     - /zmk/zmk/app/prj.conf
+  toolchain:
+    name: zephyr
+    path: /opt/zephyr-sdk-0.16.9
+  vendor-specific:
+    nordic:
+      svdfile: /zmk/modules/hal/nordic/nrfx/mdk/nrf52840.svd
+  zephyr:
+    version: 4.1.0
+    zephyr-base: /zmk/zephyr
+version: 0.1.0
+west:
+  command: /usr/local/bin/west build -d ./build/anywhy_flake_right -p -b nice_nano//zmk -s /zmk/zmk/app -- -DZMK_CONFIG=/zmk/config -DBOARD_ROOT=/zmk -DSHIELD=anywhy_flake_right
+  topdir: /zmk
+  version: 1.5.0

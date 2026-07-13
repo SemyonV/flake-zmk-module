@@ -1,0 +1,6 @@
+west:
+  command: /usr/local/bin/west build -d ./build/anywhy_flake_left -p -b nice_nano//zmk
+    -s /zmk/zmk/app -S studio-rpc-usb-uart -- -DZMK_CONFIG=/zmk/config -DBOARD_ROOT=/zmk
+    -DSHIELD=anywhy_flake_left
+  topdir: /zmk
+  version: 1.5.0

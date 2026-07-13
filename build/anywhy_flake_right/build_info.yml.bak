@@ -1,0 +1,5 @@
+west:
+  command: /usr/local/bin/west build -d ./build/anywhy_flake_right -p -b nice_nano//zmk
+    -s /zmk/zmk/app -- -DZMK_CONFIG=/zmk/config -DBOARD_ROOT=/zmk -DSHIELD=anywhy_flake_right
+  topdir: /zmk
+  version: 1.5.0
